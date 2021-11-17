@@ -1,16 +1,23 @@
 import React from "react";
-import logo from "./logo.svg";
+
 import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import Auth from "./features/auth/auth";
+import Shifts from "./features/shifts/shifts";
+import { Route, Routes } from "react-router";
 
 function App() {
   return (
     <div className="App">
+      <Routes>
+        <Route path="/" element={<Auth />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/shifts" element={<Shifts />} />
+      </Routes>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <Auth />
         <Counter />
+        <Shifts />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
