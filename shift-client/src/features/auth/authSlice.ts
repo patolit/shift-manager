@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchAuth } from "./authApi";
+import { fetchAuth } from "../../services/api/authApi";
 
 export interface AuthState {
   isAuth: boolean;
